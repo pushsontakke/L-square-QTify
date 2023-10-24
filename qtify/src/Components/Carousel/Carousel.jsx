@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import styles from './Carousel.module.css';
-import { Swiper, SwiperSlide, useSwiper}  from "swiper/react";
+import {Swiper, SwiperSlide, useSwiper} from "swiper/react";
 import {Navigation} from "swiper/modules";
 import CarouselLeftNavigation from "./CarouselLeftNavigation";
 import CarouselRightNavigation from "./CarouselRightNavigation";
@@ -11,27 +11,21 @@ const Controls = ({data}) => {
 
     useEffect(() => {
         swiper.slideTo(0, null);
-    }, [data]);
+    }, [data, swiper]);
 
     return <></>
 }
 
 const Carousel = ({data, renderComponent}) => {
-    return (
-        <div className={styles.wrapper}>
+    return (<div className={styles.wrapper}>
             <Swiper style={{padding: "0px 20px"}} initialSlide={0} modules={[Navigation]} slidesPerView={"auto"}
                     spaceBetween={40} allowTouchMove>
-                <Controls data={data} />
+                <Controls data={data}/>
                 <CarouselLeftNavigation/>
                 <CarouselRightNavigation/>
-                {
-                    data.map(item => (
-                        <SwiperSlide>{renderComponent(item)}</SwiperSlide>
-                    ))
-                }
+                {data.map(item => (<SwiperSlide>{renderComponent(item)}</SwiperSlide>))}
             </Swiper>
-        </div>
-    )
+        </div>)
 }
 
 export default Carousel;

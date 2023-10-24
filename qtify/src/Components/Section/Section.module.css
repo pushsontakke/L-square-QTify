@@ -1,3 +1,6 @@
+.mainSection {
+    margin-bottom: 32px;
+}
 .wrapper{
     display: flex;
     gap: 40px;
