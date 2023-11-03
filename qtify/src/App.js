@@ -5,7 +5,7 @@ import './App.css';
 import {fetchTopAlbums, fetchNewAlbums, fetchSongs} from './api/api';
 import Section from "./Components/Section/Section";
 import styles from "./App.module.css";
-
+import BasicAccordion from '../src/Components/Accordion/Accordion';
 
 function App() {
     const [topAlbumsData, setTopAlbumsData] = useState([]);
@@ -112,6 +112,7 @@ function App() {
                 handleChange={handleChange}
             />
         </div>
+            <BasicAccordion />
     </div>);
 }
 

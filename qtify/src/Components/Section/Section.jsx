@@ -34,11 +34,11 @@ export const Section = ({
                 styleOverrides: {
                     indicator: {
                         backgroundColor: '#34C94B',
-                    }
-                }
-            }
-        }
-    })
+                    },
+                },
+            },
+        },
+    });
 
 
     return (
@@ -79,6 +79,7 @@ export const Section = ({
                     </div>
                 )
             }
+
         </div>
     )
 }
