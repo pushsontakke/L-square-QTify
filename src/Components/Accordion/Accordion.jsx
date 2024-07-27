@@ -46,7 +46,7 @@ export default function BasicAccordion() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Sorry, unfortunately we don't provide the service to download any songs.
+                        Sorry, unfortunately we don't provide the service to download any songs for now. But we will in the future. so, Stay tuned!
                     </Typography>
                 </AccordionDetails>
             </Accordion>
